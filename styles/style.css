@@ -1,0 +1,7 @@
+.all-movies-titles {
+  font-weight: bold;
+}
+
+.all-movies-titles > p {
+  font-weight: normal;
+}

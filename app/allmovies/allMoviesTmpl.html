@@ -2,7 +2,7 @@
 
 <input placeholder="search by title" ng-model="titleSearch">
 
-<div ng-repeat="film in allMovies | filter: titleSearch" ng-click="showCount = !showCount">
+<div class="all-movies-titles" ng-repeat="film in allMovies | filter: titleSearch" ng-click="showCount = !showCount">
   {{film.Film}}
 
     <p ng-show="showCount">
