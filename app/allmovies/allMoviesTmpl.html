@@ -1,0 +1,20 @@
+<h3>all movies here!</h3>
+
+<input placeholder="search by title" ng-model="titleSearch">
+
+<div ng-repeat="film in allMovies | filter: titleSearch" ng-click="showCount = !showCount">
+  {{film.Film}}
+
+    <p ng-show="showCount">
+      Body Count: {{film.Body_Count}}<br>
+      Director: {{film.Director}}<br>
+      Rating: {{film.MPAA_Rating}}<br>
+      Genre: {{film.Genre}}<br>
+      Year: {{film.Year}}<br>
+      Length: {{film.Length_Minutes}} minutes<br>
+      IMDB Rating: {{film.IMDB_Rating}}<br>
+      {{$index}}
+      <br>
+    </p>
+
+</div>
