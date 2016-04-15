@@ -1,5 +1,6 @@
 .all-movies-titles {
   font-weight: bold;
+  cursor: pointer;
 }
 
 .all-movies-titles > p {

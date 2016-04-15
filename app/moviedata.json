@@ -400,7 +400,17 @@
     "IMDB_Rating": 6.5
   },
   {
-    "Film": "Assault On Precinct 13",
+    "Film": "Army of Darkness",
+    "Year": 1993,
+    "Body_Count": 107,
+    "MPAA_Rating": "R",
+    "Genre": "Comedy/Fantasy/Horror",
+    "Director": "Sam Raimi",
+    "Length_Minutes": 81,
+    "IMDB_Rating": 7.6
+  },
+  {
+    "Film": "Assault On Precinct 13 (1976)",
     "Year": 1976,
     "Body_Count": 39,
     "MPAA_Rating": "R",
@@ -410,7 +420,7 @@
     "IMDB_Rating": 7.4
   },
   {
-    "Film": "Assault On Precinct 13",
+    "Film": "Assault On Precinct 13 (2005)",
     "Year": 2005,
     "Body_Count": 21,
     "MPAA_Rating": "R",
@@ -1090,7 +1100,7 @@
     "IMDB_Rating": 8.4
   },
   {
-    "Film": "Dawn of the Dead",
+    "Film": "Dawn of the Dead (1978)",
     "Year": 1978,
     "Body_Count": 175,
     "MPAA_Rating": "R",
@@ -1100,7 +1110,7 @@
     "IMDB_Rating": 8
   },
   {
-    "Film": "Dawn of the Dead",
+    "Film": "Dawn of the Dead (2004)",
     "Year": 2004,
     "Body_Count": 131,
     "MPAA_Rating": "R",
@@ -2270,16 +2280,6 @@
     "IMDB_Rating": 8.6
   },
   {
-    "Film": "Leon",
-    "Year": 1994,
-    "Body_Count": 33,
-    "MPAA_Rating": "R",
-    "Genre": "Crime/Drama/Thriller",
-    "Director": "Luc Besson",
-    "Length_Minutes": 110,
-    "IMDB_Rating": 8.6
-  },
-  {
     "Film": "Lethal Weapon",
     "Year": 1987,
     "Body_Count": 26,
@@ -3030,16 +3030,6 @@
     "IMDB_Rating": 5.8
   },
   {
-    "Film": "Prince of Jutland",
-    "Year": 1994,
-    "Body_Count": 38,
-    "MPAA_Rating": "R",
-    "Genre": "Adventure/Drama",
-    "Director": "Gabriel Axel",
-    "Length_Minutes": 103,
-    "IMDB_Rating": 5.8
-  },
-  {
     "Film": "Pulp",
     "Year": 1972,
     "Body_Count": 6,
@@ -3228,16 +3218,6 @@
     "Director": "Russell Mulcahy",
     "Length_Minutes": 94,
     "IMDB_Rating": 6.2
-  },
-  {
-    "Film": "Riders",
-    "Year": 2002,
-    "Body_Count": 6,
-    "MPAA_Rating": "R",
-    "Genre": "Action/Crime/Thriller",
-    "Director": "Gerard Pires",
-    "Length_Minutes": 83,
-    "IMDB_Rating": 5.4
   },
   {
     "Film": "Riders",
@@ -4220,26 +4200,6 @@
     "IMDB_Rating": 6.8
   },
   {
-    "Film": "The Evil Dead III:",
-    "Year": 1993,
-    "Body_Count": 107,
-    "MPAA_Rating": "R",
-    "Genre": "Comedy/Fantasy/Horror",
-    "Director": "Sam Raimi",
-    "Length_Minutes": 81,
-    "IMDB_Rating": 7.6
-  },
-  {
-    "Film": "The Evil Dead III: Army of Darkness",
-    "Year": 1993,
-    "Body_Count": 107,
-    "MPAA_Rating": "R",
-    "Genre": "Comedy/Fantasy/Horror",
-    "Director": "Sam Raimi",
-    "Length_Minutes": 81,
-    "IMDB_Rating": 7.6
-  },
-  {
     "Film": "The Expendables",
     "Year": 2010,
     "Body_Count": 203,
@@ -4360,7 +4320,7 @@
     "IMDB_Rating": 7.6
   },
   {
-    "Film": "The Hunted",
+    "Film": "The Hunted (1995)",
     "Year": 1995,
     "Body_Count": 83,
     "MPAA_Rating": "R",
@@ -4370,7 +4330,7 @@
     "IMDB_Rating": 5.8
   },
   {
-    "Film": "The Hunted",
+    "Film": "The Hunted (2003)",
     "Year": 2003,
     "Body_Count": 74,
     "MPAA_Rating": "R",
@@ -4690,7 +4650,7 @@
     "IMDB_Rating": 7.9
   },
   {
-    "Film": "The Patriot",
+    "Film": "The Patriot (1998)",
     "Year": 1998,
     "Body_Count": 42,
     "MPAA_Rating": "R",
@@ -4700,7 +4660,7 @@
     "IMDB_Rating": 3.9
   },
   {
-    "Film": "The Patriot",
+    "Film": "The Patriot (2000)",
     "Year": 2000,
     "Body_Count": 123,
     "MPAA_Rating": "R",
@@ -4740,7 +4700,7 @@
     "IMDB_Rating": 8.5
   },
   {
-    "Film": "The Punisher",
+    "Film": "The Punisher (1989)",
     "Year": 1989,
     "Body_Count": 96,
     "MPAA_Rating": "R",
@@ -4750,7 +4710,7 @@
     "IMDB_Rating": 5.5
   },
   {
-    "Film": "The Punisher",
+    "Film": "The Punisher (2004)",
     "Year": 2004,
     "Body_Count": 66,
     "MPAA_Rating": "R",

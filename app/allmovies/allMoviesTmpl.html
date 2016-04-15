@@ -2,10 +2,10 @@
 
 <input placeholder="search by title" ng-model="titleSearch">
 
-<div class="all-movies-titles" ng-repeat="film in allMovies | filter: titleSearch" ng-click="showCount = !showCount">
+<div class="all-movies-titles" ng-repeat="film in allMovies | filter: titleSearch" ng-click="showData = !showData">
   {{film.Film}}
-
-    <p ng-show="showCount">
+{{test2}}
+    <p ng-show="showData">
       Body Count: {{film.Body_Count}}<br>
       Director: {{film.Director}}<br>
       Rating: {{film.MPAA_Rating}}<br>
@@ -13,8 +13,11 @@
       Year: {{film.Year}}<br>
       Length: {{film.Length_Minutes}} minutes<br>
       IMDB Rating: {{film.IMDB_Rating}}<br>
-      {{$index}}
+      <button ng-click="addMovie($index)">Add to My List</button>
       <br>
     </p>
 
 </div>
+
+
+<script src="./app/styles/jquery.js"></script>

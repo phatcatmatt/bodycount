@@ -1,2 +1,7 @@
-
 <h3>this is my list</h3>
+<hr/>
+<div ng-repeat="film in myMovies">
+  {{film.Film}}
+</div>
+<h3>your body count is {{myBodyCount}}</h3>
+<button ng-click="reset()">reset</button>
