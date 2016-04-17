@@ -5,20 +5,31 @@
 
 </div>
 <hr/>
-<h3>your body count is {{myBodyCount}}</h3>
-<h3>your deaths per minute is {{deathsPerMinute}}</h3>
-M: {{countM}}
-<br>
-R: {{countR}}
-<br>
-PG-13: {{countPG13}}
-<br>
-PG: {{countPG}}
-<br>
-G: {{countG}}
-<br>
-Unrated: {{countUnrated}}
-<br>
-Total minutes: {{totalMinutes}}
-<br>
+<div class="my-counters">
+  <h3>your body count is: {{myBodyCount}}</h3>
+  <h3>your deaths per minute is: {{deathsPerMinute}}</h3>
+    X: {{countX}}
+    <br>
+    M: {{countM}}
+    <br>
+    R: {{countR}}
+    <br>
+    PG-13: {{countPG13}}
+    <br>
+    PG: {{countPG}}
+    <br>
+    G: {{countG}}
+    <br>
+    Unrated: {{countUnrated}}
+    <br>
+    Approved: {{countApproved}}
+    <br>
+    GP: {{countGP}}
+    <br>
+    Total movies: {{totalMovies}}
+    <br>
+    Total minutes: {{totalMinutes}}
+    <br>
+</div>
 <button ng-click="reset()">reset</button>
+<!-- <button ng-click="addAll()">ALL</button> -->

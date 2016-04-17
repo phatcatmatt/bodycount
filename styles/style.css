@@ -6,3 +6,7 @@
 .all-movies-titles > p {
   font-weight: normal;
 }
+
+.my-counters {
+  visibility: visible;
+}

@@ -1,4 +1,5 @@
 angular.module('movieDeathsApp', ['ui.router', 'firebase'])
+.constant('firebaseRoot', 'https://moviedeaths.firebaseio.com/')
 .config(function($stateProvider, $urlRouterProvider){
 
 $urlRouterProvider.otherwise('/')
