@@ -51,12 +51,6 @@ angular.module('movieDeathsApp')
 //   "fill": "#ffffff",
 // })
 
-
-
-
-
-
-
   $scope.myMovies = [];
   var dataset = [];
 
@@ -79,10 +73,11 @@ angular.module('movieDeathsApp')
   }
 
   $scope.addMovie = function(movie){
-    $scope.startCounters();
-    $scope.myMovies.push($scope.allMovies[movie]);
-    dataset.push($scope.allMovies[movie].Body_Count)
 
+    $scope.startCounters();
+    $scope.myMovies.push(movie);
+    //dataset.push($scope.allMovies[movie].Body_Count)
+    console.log($scope.myMovies)
     for(var i = 0; i < $scope.myMovies.length; i++){
       $scope.myBodyCount += $scope.myMovies[i].Body_Count;
       $scope.totalMinutes += $scope.myMovies[i].Length_Minutes;
@@ -118,47 +113,6 @@ angular.module('movieDeathsApp')
     }
     $scope.deathsPerMinute = Math.round(($scope.myBodyCount / $scope.totalMinutes) * 100) / 100
     $scope.totalMovies = $scope.myMovies.length;
-    console.log(dataset)
-    var w = 300;
-    var h = 300;
-    var padding = 2;
-
-
-    var svg = d3.select("body").append("svg")
-    .attr("width", w)
-    .attr("height", h);
-
-    function colorPicker(v){
-      if (v > 99) {return "#ff0033"}
-      else if (v <= 99) {return "#666666"}
-    }
-
-    svg.selectAll("rect")
-      .data(dataset)
-      .enter()
-      .append("rect")
-       .attr({
-       x: function(d, i){return i * (w / dataset.length)},
-       y: function(d){return h - (d)},
-       width: w /dataset.length - padding,
-       height: function(d) {return (d)},
-       fill: function(d){return colorPicker(d)}
-     })
-
-     svg.selectAll("text")
-     .data(dataset)
-     .enter()
-     .append("text")
-     .text(function (d){return d})
-     .attr({
-       "text-anchor": "middle",
-       x: function(d, i) {return i * (w / dataset.length)+ (w / dataset.length - padding) / 2},
-       y: function(d) {return h - (d) + 14},
-       "font-family": "sans-serif",
-       "font-size": 12,
-       "fill": "#ffffff"
-
-     })
 
 
 
@@ -169,6 +123,15 @@ angular.module('movieDeathsApp')
     $scope.startCounters();
 
   }
+
+
+
+
+
+
+
+
+
 
 
 // for adding all movies to my list with button click

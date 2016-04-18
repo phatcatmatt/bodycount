@@ -1,19 +1,30 @@
 <h3>all movies here!</h3>
 
-<input placeholder="search by title" ng-model="titleSearch">
 
-<div class="all-movies-titles" ng-repeat="film in allMovies | filter: titleSearch" ng-click="showData = !showData">
+<input placeholder="search" ng-model="query[queryBy]"/>
+
+<select ng-model="queryBy"/>
+
+  <option value="Film">Title</option>
+  <option value="Director">Director</option>
+  <option value="Year">Year</option>
+  <option value="MPAA_Rating">MPAA Rating</option>
+  <option value="Genre">Genre</option>
+  <!-- <option value="Length_Minutes">Length</option> -->
+  <!-- <option value="IMDB_Rating">IMDB Rating</option> -->
+</select>
+
+<div class="all-movies-titles" ng-repeat="film in allMovies | filter: query" ng-click="showData = !showData" >
   {{film.Film}}
-{{test}}
     <p ng-show="showData">
       Body Count: {{film.Body_Count}}<br>
       Director: {{film.Director}}<br>
-      Rating: {{film.MPAA_Rating}}<br>
+      MPAA Rating: {{film.MPAA_Rating}}<br>
       Genre: {{film.Genre}}<br>
       Year: {{film.Year}}<br>
       Length: {{film.Length_Minutes}} minutes<br>
       IMDB Rating: {{film.IMDB_Rating}}<br>
-      <button ng-click="addMovie($index)">Add to My List</button>
+      <button ng-click="addMovie(film)">Add to My List</button>
       <br>
     </p>
 

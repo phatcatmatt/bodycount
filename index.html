@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title></title>
   </head>
   <body ng-controller="mainCtrl">
 
 
-
+    <header-directive></header-directive>
     <a ui-sref="home">Home</a>
     <a ui-sref="my-list">My List</a>
     <a ui-sref="all-movies">All Movies</a>
@@ -21,7 +27,7 @@
 
     <ui-view></ui-view>
 
-    
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
@@ -36,6 +42,8 @@
     <script src="./app/home/homeCtrl.js"></script>
     <script src="./app/mylist/myListCtrl.js"></script>
     <script src="./styles/jquery.js"></script>
+    <script src="./app/allDataDirective.js"></script>
+    <script src="./app/headerDirective.js"></script>
 
 
 
