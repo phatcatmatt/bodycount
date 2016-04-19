@@ -1,35 +1,23 @@
-<h3>this is my list</h3>
+<div ng-show="noMoviesMessage">
 
-<div ng-repeat="film in myMovies">
-  {{film.Film}}
+
+<div>
+  <h3>Selected Movies</h3>
+  <br>
 
 </div>
-<hr/>
-<div class="my-counters">
-  <h3>your body count is: {{myBodyCount}}</h3>
-  <h3>your deaths per minute is: {{deathsPerMinute}}</h3>
-    X: {{countX}}
+<div class="all-movies-titles" ng-repeat="film in myMovies">
+
+    {{film.Film}}
     <br>
-    M: {{countM}}
-    <br>
-    R: {{countR}}
-    <br>
-    PG-13: {{countPG13}}
-    <br>
-    PG: {{countPG}}
-    <br>
-    G: {{countG}}
-    <br>
-    Unrated: {{countUnrated}}
-    <br>
-    Approved: {{countApproved}}
-    <br>
-    GP: {{countGP}}
-    <br>
-    Total movies: {{totalMovies}}
-    <br>
-    Total minutes: {{totalMinutes}}
+    <p>total deaths: {{film.Body_Count}}</p>
+    <p>Deaths per minute: {{film.deathsPerMinute}}</p>
     <br>
 </div>
-<button ng-click="reset()">reset</button>
+
+<button class="add-movie-button" ng-click="reset()">reset</button>
+</div>
+<div class="instructions" ng-show="!noMoviesMessage">
+  You have no movies in your list. Go to 'All Movies' to start adding!
+</div>
 <!-- <button ng-click="addAll()">ALL</button> -->

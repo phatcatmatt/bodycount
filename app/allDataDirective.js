@@ -2,37 +2,25 @@ angular.module('movieDeathsApp')
     .directive('allDataDirective', function() {
 
             return {
-                restirict: 'E',
-                template: '<div></div>',
-                controller: function($scope) {
+                restrict: 'E',
+                template: '<div><svg id="directiveChart"></svg></div>',
+                controller: function($scope, $state) {
 
-                    if ($scope.dataset) {
-                      console.log("cool beans")
-                        svg.selectAll(".allClass")
-                            .data($scope.dataset)
-                            .exit()
-                            .remove();
-                          }
+                  var w = 300;
+                  var h = 300;
+                  var padding = 2;
+                  $scope.dataset = []
+                  for (var i = 0; i < $scope.myMovies.length; i++) {
+                      $scope.dataset.push($scope.myMovies[i].deathsPerMinute)
+                  }
 
-
-
-
-                        $scope.dataset = []
-                        for (var i = 0; i < $scope.myMovies.length; i++) {
-                            $scope.dataset.push($scope.myMovies[i].Body_Count)
-                        }
-                        var w = 300;
-                        var h = 300;
-                        var padding = 2;
-
-
-                        var svg = d3.select("body").append("svg")
+                        var svg = d3.select("#directiveChart")
                             .attr("width", w)
                             .attr("height", h);
 
                         function colorPicker(v) {
                             if (v > 99) {
-                                return "#ff0033"
+                                return "#c12e2e"
                             } else if (v <= 99) {
                                 return "#666666"
                             }
@@ -81,10 +69,8 @@ angular.module('movieDeathsApp')
                             })
 
                     }
+                  }
 
-
-
-                }
 
 
 

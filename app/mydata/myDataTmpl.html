@@ -1,0 +1,32 @@
+<div class="my-counters" ng-show="noMoviesMessage">
+  <br>
+  <h3>your body count is: {{myBodyCount}}</h3>
+  <h3>your total deaths per minute is: {{totalDeathsPerMinute}}</h3>
+    <div ng-show="myDataCountX">X: {{countX}}</div>
+    <br>
+    <div ng-show="myDataCountM">M: {{countM}}</div>
+    <br>
+    <div ng-show="myDataCountR">R: {{countR}}</div>
+    <br>
+    <div ng-show="myDataCountPG13">PG-13: {{countPG13}}</div>
+    <br>
+    <div ng-show="myDataCountPG">PG: {{countPG}}</div>
+    <br>
+    <div ng-show="myDataCountG">G: {{countG}}</div>
+    <br>
+    <div ng-show="myDataCountUnrated">Unrated: {{countUnrated}}</div>
+    <br>
+    <div ng-show="myDataCountApproved">Approved: {{countApproved}}</div>
+    <br>
+    <div ng-show="myDataCountGP">GP: {{countGP}}</div>
+    <br>
+    Total movies: {{totalMovies}}
+    <br>
+    Total minutes: {{totalMinutes}}
+    <br>
+</div>
+<div class="instructions" ng-show="!noMoviesMessage">
+  You have no data to show. Add some movies to your list to see your data.
+</div>
+
+<all-data-directive></all-data-directive>
