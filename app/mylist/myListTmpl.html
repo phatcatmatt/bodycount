@@ -1,23 +1,45 @@
 <div ng-show="noMoviesMessage">
 
 
-<div>
-  <h3>Selected Movies</h3>
+    <div class="seclected-movies">
+        <br>
+        <h3>Selected Movies</h3>
+        <br>
+
+    </div>
+
+
+
+    <div class="all-movies-titles-my-list" ng-repeat="film in myMovies">
+
+        {{film.Film}}
+        <div id="my-list-movies">
+            <p class="my-list-details">total deaths: {{film.Body_Count}}</p>
+            <p class="my-list-details">DPM: {{film.deathsPerMinute}}</p>
+            <button class="remove-movie-button" ng-click="removeMovie($index)">remove</button>
+        </div>
+          <br>
+    </div>
+
+    <button id="reset-button" class="add-movie-button" ng-click="reset()">reset</button>
+</div>
+
+<div class="all-movies-titles-my-list-removed" ng-repeat="film in removedMovies">
+{{film.Film}}
+<div id="my-list-movies">
+    <p class="my-list-details-removed">total deaths: {{film.Body_Count}}</p>
+    <p class="my-list-details">DPM: {{film.deathsPerMinute}}</p>
+    <button class="restore-movie-button" ng-click="restoreMovie($index)">undo</button>
+</div>
   <br>
 
-</div>
-<div class="all-movies-titles" ng-repeat="film in myMovies">
 
-    {{film.Film}}
-    <br>
-    <p>total deaths: {{film.Body_Count}}</p>
-    <p>Deaths per minute: {{film.deathsPerMinute}}</p>
-    <br>
 </div>
 
-<button class="add-movie-button" ng-click="reset()">reset</button>
-</div>
+
+
+
+
 <div class="instructions" ng-show="!noMoviesMessage">
-  You have no movies in your list. Go to 'All Movies' to start adding!
+    You have no movies in your list. Go to 'All Movies' to start adding!
 </div>
-<!-- <button ng-click="addAll()">ALL</button> -->

@@ -3,7 +3,7 @@ angular.module('movieDeathsApp')
 
             return {
                 restrict: 'E',
-                template: '<div><svg id="directiveChart"></svg></div>',
+                template: '<div class="d3Container"><svg id="directiveChart"></svg></div>',
                 controller: function($scope, $state) {
 
                   var w = 300;
@@ -11,20 +11,35 @@ angular.module('movieDeathsApp')
                   var padding = 2;
                   $scope.dataset = []
                   for (var i = 0; i < $scope.myMovies.length; i++) {
-                      $scope.dataset.push($scope.myMovies[i].deathsPerMinute)
+                      $scope.dataset.push($scope.myMovies[i])
                   }
 
                         var svg = d3.select("#directiveChart")
                             .attr("width", w)
                             .attr("height", h);
 
+
                         function colorPicker(v) {
-                            if (v > 99) {
+                            if (v >= 1) {
                                 return "#c12e2e"
-                            } else if (v <= 99) {
-                                return "#666666"
+                            } else if (v < 1) {
+                                return "#9e9e9e"
                             }
                         }
+
+                        var xScale = d3.scale.linear()
+                        .domain([
+                          0,
+                          ($scope.dataset.length)
+                        ])
+                        .range([0, w]);
+
+
+                        var yScale = d3.scale.linear()
+                        .domain([
+                          0, d3.max($scope.dataset, function(d){return d.deathsPerMinute})
+                        ])
+                        .range([h, 0])
 
                         svg.selectAll("rect")
                             .attr("class", "allClass")
@@ -33,17 +48,17 @@ angular.module('movieDeathsApp')
                             .append("rect")
                             .attr({
                                 x: function(d, i) {
-                                    return i * (w / $scope.dataset.length)
+                                    return xScale(i)
                                 },
                                 y: function(d) {
-                                    return h - (d)
+                                    return yScale(d.deathsPerMinute)
                                 },
                                 width: w / $scope.dataset.length - padding,
                                 height: function(d) {
-                                    return (d)
+                                    return h-yScale(d.deathsPerMinute)
                                 },
                                 fill: function(d) {
-                                    return colorPicker(d)
+                                    return colorPicker(d.deathsPerMinute)
                                 }
                             })
 
@@ -53,7 +68,7 @@ angular.module('movieDeathsApp')
                             .enter()
                             .append("text")
                             .text(function(d) {
-                                return d
+                                return d.deathsPerMinute
                             })
                             .attr({
                                 "text-anchor": "middle",
@@ -61,12 +76,17 @@ angular.module('movieDeathsApp')
                                     return i * (w / $scope.dataset.length) + (w / $scope.dataset.length - padding) / 2
                                 },
                                 y: function(d) {
-                                    return h - (d) + 14
+                                  if((h - yScale(d.deathsPerMinute)) < 20){
+                                    return h - 18
+                                  } else {
+                                    return (yScale(d.deathsPerMinute)) + 16
+                                  }
                                 },
-                                "font-family": "sans-serif",
-                                "font-size": 12,
-                                "fill": "#ffffff"
+                                "font-family": "Lato",
+                                "font-size": 14,
+                                "fill": "#000"
                             })
+
 
                     }
                   }

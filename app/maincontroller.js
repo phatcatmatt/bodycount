@@ -8,6 +8,8 @@ angular.module('movieDeathsApp')
 
         $scope.myMovies = [];
         $scope.queryBy = '$';
+        $scope.removedMovies = []
+
 
 
         $scope.startCounters = function() {
@@ -81,14 +83,27 @@ angular.module('movieDeathsApp')
 
             $scope.totalMovies = $scope.myMovies.length;
             $scope.noMoviesMessage = true;
-
         }
 
         $scope.reset = function() {
             $scope.myMovies = [];
             $scope.startCounters();
+            $scope.removedMovies = []
+
         }
 
+        $scope.removeMovie = function(movie){
+          $scope.removedMovies.push($scope.myMovies[movie])
+          $scope.myMovies.splice([movie], 1);
+        }
 
+        $scope.restoreMovie = function(movie){
+          $scope.myMovies.push($scope.removedMovies[movie])
+          $scope.removedMovies.splice([movie], 1);
+        }
+
+        $scope.movieDisable = function(film){
+          film.disabled = true;
+        }
 
     })
