@@ -21,5 +21,4 @@ angular.module('movieDeathsApp', ['ui.router', 'firebase'])
 
             })
 
-
     })

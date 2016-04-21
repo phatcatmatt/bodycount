@@ -42,7 +42,6 @@ angular.module('movieDeathsApp')
                 return color(d.data.Film);
               });
 
-
               var legend = svg.selectAll('.legend')
               .data(color.domain())
               .enter()
@@ -67,11 +66,7 @@ angular.module('movieDeathsApp')
               .attr('y', legendRectSize - legendSpacing)
               .text(function(d) {return d; })
 
-
             }
         }
-
-
-
 
     })

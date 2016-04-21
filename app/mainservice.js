@@ -7,5 +7,4 @@ angular.module('movieDeathsApp')
                     return response.data
                 })
         }
-
     })

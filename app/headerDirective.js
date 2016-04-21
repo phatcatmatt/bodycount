@@ -15,7 +15,4 @@ angular.module('movieDeathsApp')
 
   }
 
-
-
-
 })

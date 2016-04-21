@@ -5,12 +5,9 @@ angular.module('movieDeathsApp')
         var ref = new Firebase(firebaseRoot + 'moviedata/');
         $scope.allMovies = $firebaseArray(ref)
 
-
         $scope.myMovies = [];
         $scope.queryBy = '$';
         $scope.removedMovies = []
-
-
 
         $scope.startCounters = function() {
             $scope.myBodyCount = 0;
@@ -36,9 +33,7 @@ angular.module('movieDeathsApp')
             $scope.myDataCountApproved = false;
             $scope.myDataCountGP = false;
             $scope.noMoviesMessage = false;
-
         }
-
 
         $scope.addMovie = function(movie) {
 
@@ -112,6 +107,5 @@ angular.module('movieDeathsApp')
         $scope.movieEnable = function(film){
           film.disabled = false;
         }
-
-
+        
     })
