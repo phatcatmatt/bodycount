@@ -86,6 +86,9 @@ angular.module('movieDeathsApp')
         }
 
         $scope.reset = function() {
+            for (var i = 0; i < $scope.myMovies.length; i++) {
+              $scope.movieEnable($scope.myMovies[i])
+            }
             $scope.myMovies = [];
             $scope.startCounters();
             $scope.removedMovies = []
@@ -105,5 +108,10 @@ angular.module('movieDeathsApp')
         $scope.movieDisable = function(film){
           film.disabled = true;
         }
+
+        $scope.movieEnable = function(film){
+          film.disabled = false;
+        }
+
 
     })

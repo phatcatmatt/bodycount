@@ -206,3 +206,46 @@ a:active {
 .arc path {
   stroke: #fff;
 }
+
+.legend{
+  font-size: 12px;
+}
+
+
+#pieChart{
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.bar-graph-title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.pie-chart-title{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.pieToolTip{
+  background: #eee;
+  box-shadow: 0 0 5px;
+  color: #333;
+  display: none;
+  font-size: 14px;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  top: 95px;
+  width: 80px;
+  z-index: 10;
+}

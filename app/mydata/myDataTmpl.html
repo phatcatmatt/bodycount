@@ -1,4 +1,5 @@
-<div class="my-counters" ng-show="noMoviesMessage">
+<div ng-show="noMoviesMessage">
+<div class="my-counters" >
 
   total DPM: {{totalDeathsPerMinute}}<br>
   total body count: {{myBodyCount}}<br>
@@ -16,12 +17,12 @@
     <div ng-show="myDataCountUnrated">Unrated: {{countUnrated}}</div>
     <div ng-show="myDataCountApproved">Approved: {{countApproved}}</div>
     <div ng-show="myDataCountGP">GP: {{countGP}}</div>
-
-
+</div>
+<div class="bar-graph-title">DPM by movie</div>
+<all-data-directive></all-data-directive>
+<div class="pie-chart-title">Total deaths per movie</div>
+<pie-chart-directive></pie-chart-directive>
 </div>
 <div class="instructions" ng-show="!noMoviesMessage">
   You have no data to show. Add some movies to your list to see your data.
 </div>
-
-<all-data-directive></all-data-directive>
-<pie-chart-directive></pie-chart-directive>
