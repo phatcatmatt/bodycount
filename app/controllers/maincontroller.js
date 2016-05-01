@@ -105,6 +105,7 @@ angular.module('movieDeathsApp')
 
 
 // functions for resetting a user's list, removing and restoring movies to a user's list, and enabling and disabling adding movies
+
       $scope.reset = function() {
           for (var i = 0; i < $scope.myMovies.length; i++) {
             $scope.movieEnable($scope.myMovies[i])

@@ -1,5 +1,5 @@
 angular.module('movieDeathsApp')
-    .directive('allDataDirective', function() {
+    .directive('barGraphDirective', function() {
 
             return {
                 restrict: 'E',

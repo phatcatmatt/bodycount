@@ -7,19 +7,18 @@ angular.module('movieDeathsApp', ['ui.router', 'firebase'])
         $stateProvider
             .state('my-data', {
                 url: '/my-data',
-                templateUrl: './app/mydata/myDataTmpl.html'
+                templateUrl: './app/views/mydata/myDataTmpl.html'
             })
 
             .state('my-list', {
                 url: '/my-list',
-                templateUrl: './app/mylist/myListTmpl.html'
+                templateUrl: './app/views/mylist/myListTmpl.html'
             })
 
             .state('all-movies', {
                 url: '/',
-                templateUrl: './app/allmovies/allMoviesTmpl.html'
+                templateUrl: './app/views/allmovies/allMoviesTmpl.html'
 
             });
 
     });
-  
