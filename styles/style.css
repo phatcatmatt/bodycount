@@ -14,15 +14,18 @@ html, body {
   font-size: 14px;
   padding: 7px;
 }
+
 .all-movies-titles-my-list {
   font-weight: bold;
   font-size: 18px;
 }
+
 .my-list-details {
   font-weight: 300;
   font-size: 14px;
   margin: 5px;
 }
+
 #my-list-movies{
   border: 1px solid #c4c4c4;
   font-weight: normal;
@@ -33,9 +36,11 @@ html, body {
 .selected-movies{
   .margin-top: 5px;
 }
+
 .add-to-list-button {
   padding: 5px;
 }
+
 .my-counters {
   border: 1px solid #c4c4c4;
   font-weight: normal;
@@ -67,7 +72,6 @@ html, body {
   background-color: #c12e2e;
   color: white;
 }
-
 
 #my-list-button {
   padding: 1vh;
@@ -150,6 +154,7 @@ a:active {
   background-color: #c12e2e;
   color: white;
 }
+
 .restore-movie-button{
   border: 2px solid #c12e2e;
   background-color: white;
@@ -161,19 +166,23 @@ a:active {
   top: 1px;
   right: 1px;
 }
+
 .restore-movie-button:hover {
   background-color: #c12e2e;
   color: white;
 }
+
 #reset-button{
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
 .all-movies-titles-my-list-removed {
   font-weight: bold;
   font-size: 18px;
   opacity: .5;
 }
+
 .my-list-details-removed {
   font-weight: normal;
   font-size: 14px;
@@ -185,13 +194,13 @@ a:active {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .instructions {
   padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
   justify-content: center;
 }
-
 
 .search-bar {
   margin-top: 10px;
@@ -210,7 +219,6 @@ a:active {
 .legend{
   font-size: 12px;
 }
-
 
 #pieChart{
   height: 300px;
@@ -234,18 +242,4 @@ a:active {
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 800;
-}
-
-.pieToolTip{
-  background: #eee;
-  box-shadow: 0 0 5px;
-  color: #333;
-  display: none;
-  font-size: 14px;
-  left: 130px;
-  padding: 10px;
-  position: absolute;
-  top: 95px;
-  width: 80px;
-  z-index: 10;
 }
